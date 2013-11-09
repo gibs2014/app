@@ -1,0 +1,134 @@
+<div class="page-header">
+  <h1>Editing Item #<%= @item.name %></h1>
+</div>
+
+<%= form_tag(item_url(@item), method: 'patch', class: 'form-horizontal') do %>
+
+  <div class="form-group">
+    <%= label_tag :name, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :name, @item.name, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :category, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :category, @item.category, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :colour, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :colour, @item.colour, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :brand, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :brand, @item.brand, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :price, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-2">
+      <%= number_field_tag :price, @item.price, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :flattering_for, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :flattering_for, @item.flattering_for, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :extra_support, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= check_box_tag :extra_support, @item.extra_support?, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :image_url, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :image_url, @item.image_url, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :general_size, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :general_size, @item.general_size, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :us_size, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :us_size, @item.us_size, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :uk_size, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :uk_size, @item.uk_size, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :eu_size, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :eu_size, @item.eu_size, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :waist_size, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :waist_size, @item.waist_size, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :hip_size, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :hip_size, @item.hip_size, class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :bust_size, nil, class: 'col-md-2 control-label' %>
+
+    <div class="col-md-6">
+      <%= text_field_tag :bust_size, @item.bust_size, class: 'form-control'%>
+    </div>
+  </div>
+
+
+    <div class="form-group">
+    <div class="col-md-offset-2 col-md-6">
+          <%= submit_tag "Update Item", class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+<% end %>

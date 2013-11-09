@@ -1,0 +1,54 @@
+<div class="page-header">
+  <h1><%= @user.first_name %> <%= @user.second_name %></h1>
+</div>
+
+<p>
+  <b>Date of birth:</b>
+  <%= @user.date_of_birth %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%= @user.email_address %>
+</p>
+
+<p>
+  <b>General size:</b>
+  <%= @user.general_size %>
+</p>
+
+<p>
+  <b>Uk size:</b>
+  <%= @user.uk_size %>
+</p>
+
+<p>
+  <b>Us size:</b>
+  <%= @user.us_size %>
+</p>
+
+<p>
+  <b>Eu size:</b>
+  <%= @user.eu_size %>
+</p>
+
+<p>
+  <b>Waist size:</b>
+  <%= @user.waist_size %>
+</p>
+
+<p>
+  <b>Hip size:</b>
+  <%= @user.hip_size %>
+</p>
+
+<p>
+  <b>Bust size:</b>
+  <%= @user.bust_size %>
+</p>
+
+<b>Here are the items to suit you:
+  <%= Item.where(:uk_size => "@user.uk_size").name%>
+</b>
+</div>
+

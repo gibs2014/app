@@ -1,0 +1,50 @@
+<div class="page-header">
+  <h1>Users</h1>
+</div>
+
+<p><%= link_to 'Add a New User', new_user_url, class: 'btn btn-primary' %></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Second name</th>
+      <th>Date of birth</th>
+      <th>Email address</th>
+      <th>General size</th>
+      <th>Uk size</th>
+      <th>Us size</th>
+      <th>Eu size</th>
+      <th>Waist size</th>
+      <th>Hip size</th>
+      <th>Bust size</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.second_name %></td>
+        <td><%= user.date_of_birth %></td>
+        <td><%= user.email_address %></td>
+        <td><%= user.general_size %></td>
+        <td><%= user.uk_size %></td>
+        <td><%= user.us_size %></td>
+        <td><%= user.eu_size %></td>
+        <td><%= user.waist_size %></td>
+        <td><%= user.hip_size %></td>
+        <td><%= user.bust_size %></td>
+  
+      <td><%= link_to '<i class="icon-zoom-in"></i>'.html_safe, user_url(user), class: 'btn btn-primary' %></td>
+      <td><%= link_to '<i class="icon-edit"></i>'.html_safe, edit_user_url(user), class: 'btn btn-warning' %></td>
+      <td><%= link_to '<i class="icon-trash"></i>'.html_safe, user_url(user), method: 'delete', data: { confirm: "Do you really want to delete this user?" }, class: 'btn btn-danger' %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
